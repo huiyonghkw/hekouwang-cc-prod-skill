@@ -16,3 +16,9 @@ git clone git@github.com:huiyonghkw/hekouwang-cc-prod-skill.git ~/.claude/skills
 ```
 
 > 凭证放项目目录的 `.env.oss`（已 gitignore，不入库）。仓库内不含任何密钥。
+
+## 依赖与视觉
+
+- 产品页的视觉规范（V2 黏土米白：Anthropic Sans/Mono + 思源黑体、配色 token、版式、`_build` 流水线）源自 **`hekouwang-content-factory`**（会勇禾口王内容工厂）。
+  > ⚠️ `hekouwang-content-factory` 是付费 Skill，**GitHub 上为 PRIVATE 私有仓库，非授权无法 clone / 获取**；本仓库只含生产/发布流程（OSS 上传器 + 产线手册），不含其字体与视觉系统。需要授权请联系 **@huiyonghkw**。
+- `oss_upload.py` / `deploy-oss.sh`：零三方依赖（标准库自实现 HMAC-SHA1 签名），可独立使用。
