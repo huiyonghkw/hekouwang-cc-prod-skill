@@ -97,7 +97,7 @@ cd ~/Dashboard/Product.intro
   ```
   上传器会**自动校正区域**：若 endpoint 配错，读 OSS 返回的 `<Endpoint>` 自动切换。
 - **访问地址（汇总页）**：`https://prds.oss-cn-beijing.aliyuncs.com/CCZC/intro/index.html`
-- **零依赖**：`scripts/oss_upload.py` 仅用 Python 标准库（自做 HMAC-SHA1 V1 签名、ThreadPool 并发、按扩展名设 Content-Type、对象 key 支持中文），无需装 ossutil / oss2。
+- **零依赖**：`assets/oss_upload.py` 仅用 Python 标准库（自做 HMAC-SHA1 V1 签名、ThreadPool 并发、按扩展名设 Content-Type、对象 key 支持中文），无需装 ossutil / oss2。
 - 本 Skill `assets/` 内附 `oss_upload.py` / `deploy-oss.sh` / `.env.oss.example` 副本，可移植到新项目（改 `OSS_PREFIX` 即可复用）。
 
 > ⚠️ 安全：`.env.oss` 含 AccessKey 明文，**绝不入库**；若密钥曾在聊天/工单等处明文出现，建议到阿里云控制台**轮换 AccessKey**。
